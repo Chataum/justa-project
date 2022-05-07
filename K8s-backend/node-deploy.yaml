@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backendjs
+  name: backend-deploy
 spec:
   selector:
     matchLabels:
-      app: backendjs
-  replicas: 2
+      app: backend-deploy
+  replicas: 1
   template:
     metadata:
       labels:
-        app: backendjs
+        app: backend-deploy
     spec:
       containers:
       - name: backendjs
         image: chataum/justa-project-backend:1.0
-      #  imagePullPolicy: Never
-      #  ports:
-      #  - containerPort: 4200
+        ports:
+        - containerPort: 8000
