@@ -19,8 +19,8 @@ metadata:
 spec:
   selector:
     app: frontend-deploy
-  type: ClusterIP
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 4200      
+      targetPort: 4200
